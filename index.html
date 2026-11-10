@@ -48,6 +48,11 @@ ol.steps span{color:var(--muted);font-size:13px;}
 #partnerOnly.on{display:block;}
 .btn:focus-visible,.copy:focus-visible,.back:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
 @media (max-width:360px){header h1{font-size:21px;}.card{padding:18px 16px;}}
+.filehead{display:flex;align-items:flex-start;gap:14px;margin-bottom:14px}
+.filehead .fh-t{flex:1;min-width:0}.filehead .sub{margin-bottom:0}
+.cover{flex:0 0 96px;display:block;border-radius:8px;overflow:hidden;border:1px solid var(--line);box-shadow:0 6px 16px rgba(27,58,92,.18);transform:rotate(2deg)}
+.cover img{display:block;width:100%;height:auto}
+@media (max-width:360px){.cover{flex-basis:80px}}
 </style>
 </head>
 <body>
@@ -60,11 +65,26 @@ ol.steps span{color:var(--muted);font-size:13px;}
 </header>
 
 <section class="card">
-  <h2>안내서 파일</h2>
-  <div class="sub">큰 글씨로, 꼭 필요한 것만 담았습니다.</div>
+  <div class="filehead">
+    <div class="fh-t">
+      <h2>안내서 파일</h2>
+      <div class="sub">큰 글씨로, 꼭 필요한 것만 담았습니다.</div>
+    </div>
+    <a class="cover" href="easy-guide.pdf" target="_blank" rel="noopener" aria-label="안내서 표지 — 눌러서 보기"><img src="cover.jpg" alt="크루즈 멤버십 쉬운 안내서 표지" width="497" height="703"></a>
+  </div>
   <a class="btn main" href="easy-guide.pdf" target="_blank" rel="noopener">📄 안내서 보기 (PDF)</a>
   <a class="btn line" href="easy-guide-print.pdf" download>🖨 인쇄용 파일 받기</a>
   <div class="note">※ 내부용 자료입니다. 공식 사이트 주소가 들어 있으니 SNS 등 공개된 곳에는 올리지 말아 주세요.</div>
+</section>
+
+
+
+<section class="card">
+  <h2>인쇄 주문할 때</h2>
+  <div class="sub">인쇄는 <b>금박이네</b>에서 해요. 아래 문구를 복사해서 주문할 때 그대로 붙여 넣으면 됩니다. 처음에는 10~20부만 뽑아 보세요.</div>
+  <div class="spec" id="spec">A4, 16쪽, 중철 제본, 양면 컬러, 20부<br>내지 스노우지 100~120g, 표지 150~200g, 코팅 없음<br>파일은 재단 여백 3mm 포함 (216×303mm)</div>
+  <button class="copy" id="copyBtn" type="button">① 📋 주문 문구 복사</button>
+  <a class="btn main shop" href="https://naver.me/xzHur2xa" target="_blank" rel="noopener">② 🖨️ 금박이네에서 주문하기</a>
 </section>
 
 <section class="card lock" id="lockCard">
@@ -91,14 +111,6 @@ ol.steps span{color:var(--muted);font-size:13px;}
   </ol>
 </section>
 </div><!-- /partnerOnly -->
-
-<section class="card">
-  <h2>인쇄 주문할 때</h2>
-  <div class="sub">인쇄는 <b>금박이네</b>에서 해요. 아래 문구를 복사해서 주문할 때 그대로 붙여 넣으면 됩니다. 처음에는 10~20부만 뽑아 보세요.</div>
-  <div class="spec" id="spec">A4, 16쪽, 중철 제본, 양면 컬러, 20부<br>내지 스노우지 100~120g, 표지 150~200g, 코팅 없음<br>파일은 재단 여백 3mm 포함 (216×303mm)</div>
-  <button class="copy" id="copyBtn" type="button">① 📋 주문 문구 복사</button>
-  <a class="btn main shop" href="https://naver.me/xzHur2xa" target="_blank" rel="noopener">② 🖨️ 금박이네에서 주문하기</a>
-</section>
 </div>
 <script>
 (function(){
